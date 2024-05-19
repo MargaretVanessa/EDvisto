@@ -1,0 +1,32 @@
+.form-container {
+    display: flex;
+    align-items: center;
+    width: 28rem;
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    background: var(--white);
+    gap: 1.25rem;
+    box-sizing: border-box;
+    width: 776px;
+}
+
+.form-container-text {
+    display: flex;
+    align-items: center;
+}
+
+#close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+img.isotipo {
+    padding-right: 10px;
+}

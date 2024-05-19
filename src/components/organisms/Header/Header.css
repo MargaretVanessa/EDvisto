@@ -1,0 +1,7 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1.25rem;
+    block-size: 4.25rem;
+}
