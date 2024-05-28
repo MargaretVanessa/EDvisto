@@ -1,0 +1,18 @@
+.empty_container {
+    inline-size: 58rem;
+    block-size: 41rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img_container {
+    inline-size: 31.25rem;
+    padding: 2.5rem;
+}
+
+.img_empty {
+    inline-size: 22.65rem;
+    block-size: 22.65rem;
+    transform: translateX(20%) translateY(15%);
+}

@@ -1,16 +1,18 @@
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
-import theme from "../../../theme/theme.js";
+import PropTypes from 'prop-types';
 
-const Loader = () => {
+const Loader = ({color,  size}) => {
     return (
-        <Backdrop
-            sx={{ color: theme.palette.primary.main, backgroundColor: "#CFCFCF"}}
-            open={true}
-        >
-            <CircularProgress size={120}  />
+        <Backdrop open={true}>
+            <CircularProgress color={color} size={size}  />
         </Backdrop>
     );
 };
+
+Loader.propTypes = {
+    color: PropTypes.string.isRequired,
+    size: PropTypes.string.isRequired
+}
 
 export default Loader;

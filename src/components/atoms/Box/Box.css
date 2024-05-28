@@ -1,8 +1,0 @@
-.box {
-    max-block-size:70.5rem;
-    max-inline-size: 51rem;
-    position: relative;
-    bottom: 3.3125rem;
-    left:-50%;
-    transform: translateX(75%);
-}

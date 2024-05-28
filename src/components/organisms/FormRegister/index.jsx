@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import LabelInput from "../../molecules/LabelInput";
 import FormGroup from "@mui/material/FormGroup";
 import Stack from "@mui/material/Stack";
-import BasicButton from "../../atoms/Button/BasicButton";
+import BasicButton from "../../atoms/Buttons/BasicButton";
 // import OutlinedInput from '@mui/material/OutlinedInput';
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";

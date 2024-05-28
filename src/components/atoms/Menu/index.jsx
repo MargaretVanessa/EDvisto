@@ -1,45 +1,39 @@
+import PropTypes from 'prop-types';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import PropTypes from 'prop-types';
-import { useNavigate } from "react-router-dom";
+import ListItemText from '@mui/material/ListItemText';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import Divider from '@mui/material/Divider';
 
-const list = [
-  {
-    editProfile: {
-      string: "Editar perfil",
-      path: "/editProfile"
-    }
-  },
-  {
-    logout: {
-      string: "Cerrar sesión",
-      path: "/"
-    }
-  }
-];
-
-const MenuContainer = () => {
-  const navigate = useNavigate();
-
-  const handleClick = (path) => {
-    navigate(path);
-};
+const BasicMenu = ({ list, anchorEl, onClose, idElement, idMenu }) => {
+  const open = Boolean(anchorEl);
 
   return (
-    <Menu>
-      {
-        list.map((item, i) => (
-          <MenuItem key={i} onClick={handleClick}>
-            {item}
+      <Menu
+        id={idMenu}
+        anchorEl={anchorEl}
+        open={open}
+        onClose={onClose}
+        MenuListProps={{
+          'aria-labelledby': `${idElement}`,
+        }}
+      >
+        {list.map((item) => (
+          <MenuItem key={item.id} onClick={onClose}>
+            {item.icon && <ListItemIcon>{item.icon}</ListItemIcon>}
+            <ListItemText>{item.string}</ListItemText>
+            <Divider/>
           </MenuItem>
-        ))
-      }
-    </Menu>
-  )
-}
+        ))}
+      </Menu>
+  );
+};
 
-MenuContainer.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.string)
-}
-
-export default MenuContainer
+BasicMenu.propTypes = {
+  list: PropTypes.arrayOf(PropTypes.object).isRequired,
+  anchorEl: PropTypes.instanceOf(Element), // Tipo específico de elemento DOM
+  onClose: PropTypes.func.isRequired,
+  idElement: PropTypes.string.isRequired,
+  idMenu: PropTypes.string.isRequired,
+};
+export default BasicMenu;

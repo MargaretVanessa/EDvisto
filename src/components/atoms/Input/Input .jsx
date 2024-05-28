@@ -14,7 +14,7 @@ const CSSTextField = styled(TextField)({
   },
 });
 
-const InputField = ({
+const InputFieldEv = ({
   inputId,
   type,
   variant = 'outlined',
@@ -62,7 +62,7 @@ const InputField = ({
         shrink: true,
         sx: { ...theme.typography.button },
       }}
-      sx={{ height: '3.5rem', color: theme.palette.primary }}
+      sx={{ height: '3.5rem', color: theme.palette.primary, margin:'3rem'}}
       >
         {options.map((option) => (
           <MenuItem key={option.value} value={option.value}>
@@ -73,7 +73,7 @@ const InputField = ({
   );
 };
 
-InputField.propTypes = {
+InputFieldEv.propTypes = {
   inputId: PropTypes.string.isRequired,
   type: PropTypes.string,
   variant: PropTypes.string,
@@ -93,4 +93,4 @@ InputField.propTypes = {
   childrenAdornment: PropTypes.node,
 };
 
-export default InputField;
+export default InputFieldEv;

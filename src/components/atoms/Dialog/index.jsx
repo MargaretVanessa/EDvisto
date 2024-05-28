@@ -19,7 +19,6 @@ const DialogContainer = ({ children }) => {
             open={open}
             scroll="body"
             onClose={()=> handleClose("/")}
-            // TransitionComponent={Transition}
             sx={{'& .MuiDialog-paper': {backgroundColor: theme.palette.gray.main, display: "flex", alingItem:"center" }}}
         >
             {children}

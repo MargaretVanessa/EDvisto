@@ -8,7 +8,7 @@ import LabelInput from "../../molecules/LabelInput";
 import FormGroup from "@mui/material/FormGroup";
 import Link from "../../atoms/Link";
 import Stack from "@mui/material/Stack";
-import BasicButton from "../../atoms/Button/BasicButton";
+import BasicButton from "../../atoms/Buttons/BasicButton";
 import Ellipse from "../../atoms/Ellipse";
 import GoogleIcon from "../../../assets/icons/google.png";
 import { ThemeProvider } from "@mui/material/styles";

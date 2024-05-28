@@ -1,22 +1,19 @@
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "../../../theme/theme.js";
 import PropTypes from 'prop-types';
 import Box from "@mui/material/Box";
-import "./Box.css";
 
-const BoxContainer = ({ color, children }) => {
+const BoxContainer = ({ color, type, height, width, radius }) => {
     return (
-        <ThemeProvider theme={theme}>
-            <Box className="box" sx={{ border: `3px solid ${color}` }}>
-                {children}
-            </Box>
-        </ThemeProvider>
+        <Box component={type} height={height} width={width} sx={{ border: `3px solid ${color}`, borderRadius:radius }}>
+        </Box>
     );
 };
 
 BoxContainer.propTypes = {
     color: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired,
+    type: PropTypes.oneOf(['div', 'form', 'section']),
+    height: PropTypes.string.isRequired,
+    width: PropTypes.string.isRequired,
+    radius: PropTypes.string,
 };
 
 export default BoxContainer;

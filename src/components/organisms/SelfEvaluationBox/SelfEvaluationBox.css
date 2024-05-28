@@ -1,0 +1,17 @@
+.form-container-SelEvaluationBox {
+    margin-top: 500px;
+}
+
+.containe-Help{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-Container-SelEvaluationBox-Button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}

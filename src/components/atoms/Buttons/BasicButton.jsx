@@ -1,23 +1,21 @@
 import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
 
-const SelfEvaluationButton = ({ variant, childrenIcon, childrenText, ariaLabel, title, onClick, borderRadius, }) => {
+const BasicButton = ({ variant, childrenIcon, childrenText, color, ariaLabel, title, onClick, borderRadius, height, width }) => {
   return (
     <Button
       variant={variant}
-     /* color={color}*/
+      color={color}
       aria-label={ariaLabel}
       title={title}
       onClick={onClick}
       sx={{
-        height: '2.5rem',
-        borderRadius: {borderRadius},
+        height: height || '2.5rem',
+        width: width, 
+        borderRadius: borderRadius,
         display: 'flex',
         gap: '0.5rem',
-        width:'18rem',
-        marginTop:'3.5rem',
-        marginLeft:'75%',
-       }}
+      }}
     >
       {childrenIcon}
       {childrenText}
@@ -25,15 +23,17 @@ const SelfEvaluationButton = ({ variant, childrenIcon, childrenText, ariaLabel, 
   );
 };
 
-SelfEvaluationButton.propTypes = {
+BasicButton.propTypes = {
   variant: PropTypes.string.isRequired,
   childrenIcon: PropTypes.node,
   childrenText: PropTypes.string.isRequired,
-  /*color: PropTypes.string,*/
+  color: PropTypes.string,
   ariaLabel: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   borderRadius: PropTypes.string,
+  height: PropTypes.string,
+  width: PropTypes.string,
 };
 
-export default SelfEvaluationButton;
+export default BasicButton;

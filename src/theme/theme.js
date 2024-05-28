@@ -23,6 +23,9 @@ const theme = createTheme({
         gray: {
             main: "#CFCFCF",
         },
+        white: {
+            main: "#F8F8FF",
+        },
         alert: {
             main: "#FF6961",
         }

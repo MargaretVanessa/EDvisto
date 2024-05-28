@@ -1,30 +1,27 @@
-import { ThemeProvider } from '@mui/material/styles';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Login from './components/pages/PageLogin';
-import Register from './components/pages/PageRegister';
-import Popup from './components/pages/PagePopup';
-import PopupStart from './components/pages/PagePopupStar';
-import theme from './theme/theme.js';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from "../src/theme/theme.js";
+import BaseLayoutSiderbar from './components/templates/BaseLayoutSiderbar/BaseLayoutSiderbar.jsx';
+import BaseLayoutHome from './components/templates/Home/BaseLayoutHome.jsx';
+  
+import Popup from './pages/PagePopup/PagePopup.jsx';
+import PopupStart from './pages/PagePopupStar/PagePopupStar.jsx';
+import Header from '../src/components/molecules/Header/Header.jsx';
+import Report from './pages/Report/Report.jsx';
 import './App.css'
 
 function App() {
-
   return (
     <ThemeProvider theme={theme}>
+      <Header/>
+      <BaseLayoutSiderbar>
       <Router>
         <Routes>
-          <Route path="/" element={<Login/>}/>
-           <Route path="/register" element={<Register/>}/>
-          <Route path="/popup" element={<Popup/>}/>
-          <Route path="/PopupStart" element={<PopupStart/>}/>
-          {/* <Route path="/" element={<Proyect color={theme.palette.accent.main}/>}/> */}
-          {/* <Route path="/*" element={<Navigate to="/Error404" /> } />  */}
+          <Route path="/Report" element={<Report/>}/>
         </Routes>
       </Router>
-
-      {/* <Proyect color={theme.palette.secondary.main}/> */}
-      {/* <Proyect color={theme.palette.primary.main}/> */}
-      {/* <Proyect color={theme.palette.accent.main}/> */}
+      </BaseLayoutSiderbar>
     </ThemeProvider>
   )
 }
