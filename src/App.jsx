@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+
 import { ThemeProvider } from '@mui/material/styles';
 import theme from "../src/theme/theme.js";
 import BaseLayoutSiderbar from './components/templates/BaseLayoutSiderbar/BaseLayoutSiderbar.jsx';
@@ -16,11 +16,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <Header/>
       <BaseLayoutSiderbar>
-      <Router>
-        <Routes>
-          <Route path="/Report" element={<Report/>}/>
-        </Routes>
-      </Router>
       </BaseLayoutSiderbar>
     </ThemeProvider>
   )
