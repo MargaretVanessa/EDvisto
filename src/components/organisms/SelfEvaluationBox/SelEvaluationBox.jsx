@@ -8,9 +8,11 @@ import Megaphone from '../../atoms/Icon/Megaphone.jsx';
 import BasicButton from '../../atoms/Buttons/BasicButton.jsx';
 import InputFieldEv from '../../atoms/Input/Input .jsx';
 import theme from "../../../theme/theme.js";
-import './SelfEvaluationBox.css';
 import Popup from '../../../pages/PagePopup/PagePopup.jsx';
 import PopupStart from '../../../pages/PagePopupStar/PagePopupStar.jsx';
+import HeaderTeacher from '../Header/HeaderTeacher.jsx';
+import './SelfEvaluationBox.css';
+
 
 function SelEvaluationBox() {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -99,6 +101,15 @@ function SelEvaluationBox() {
 
             {isPopupOpen && <Popup onClose={handleClosePopup} />}
             {isPopupStartOpen && <PopupStart onClose={handleClosePopupStart} />}
+
+            <div className='containe-Teacher'>
+            <p><h1 style={{ color: theme.palette.primary.main }}>Comentarios del docente</h1></p>
+            <div className='containe-Teacher-profile'>
+            <HeaderTeacher/>
+            <p><h1 style={{ color: theme.palette.primary.main }}>Ana López</h1></p>
+            </div>
+            <p>El docente aún no ha realizado un comentario sobre el proyecto</p>
+            </div>
         </div>
     );
 }
