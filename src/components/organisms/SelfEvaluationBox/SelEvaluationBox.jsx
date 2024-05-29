@@ -35,7 +35,7 @@ function SelEvaluationBox() {
     return (
         <div className='form-container-SelEvaluationBox'>
             <div className='containe-Help'>
-                <h1 style={{ color: theme.palette.primary.main }}>Autoevaluación</h1>
+                <p><h1 style={{ color: theme.palette.primary.main }}>Autoevaluación</h1></p>
                 <BasicButton
                     variant="outlined"
                     childrenIcon={<Bulb color='#592adc' width={28} />}

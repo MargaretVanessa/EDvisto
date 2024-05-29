@@ -1,30 +1,33 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from "../../../assets/images/eva/eva_happy.png";
-import Logo from '../../atoms/Logo';
+import Logo from '../../atoms/Logo/index.jsx';
 import BasicButton from "../../atoms/Buttons/BasicButton.jsx";
 import CustomizedRating from "../../atoms/Ranking/ranking.jsx";
 import CloseIcon from '@mui/icons-material/Close';
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../../../theme/theme.js";
-import "./FormPopupStar.css";
+import "./PopupStar.css";
 
 const FormPopupStar = ({ onClose }) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate("/");
+        navigate("/report");
     };
 
     return (
         <ThemeProvider theme={theme}>
-            <div className="form-container" style={{ border: `2px solid ${theme.palette.secondary.main}` }}>
+            <div className="form-container-popupstar" style={{ border: `2px solid ${theme.palette.secondary.main}` }}>
                 <CloseIcon id="close" onClick={onClose} />
                 <div className="form-container-text">
                     <Logo pathImg={logo} width='112px' height='112px' />
+                    <label>
                     <p>Es momento de reflexionar acerca de tu participación en este proyecto.</p>
                     <p>En cada área debés puntuar con estrellas. Te dejamos una pista para hacerlo:</p>
+                    </label>
                 </div>
+
                 <div className="star-static">
                     <div className="rating-pair">
                         <CustomizedRating defaultValue={1} readOnly />
