@@ -19,7 +19,7 @@ const DialogContainer = ({ children }) => {
             open={open}
             scroll="body"
             onClose={()=> handleClose("/")}
-            sx={{'& .MuiDialog-paper': {backgroundColor: theme.palette.gray.main, display: "flex", alingItem:"center" }}}
+            sx={{'& .MuiDialog-paper': {backgroundColor: theme.palette.background.main, display: "flex", alingItem:"center" }}}
         >
             {children}
         </Dialog>
